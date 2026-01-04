@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Automação de Encartes CorelDRAW</title>
+  <style>
+    body { font-family: sans-serif; background-color: #f4f4f4; color: #333; }
+    .container { max-width: 600px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h1 { color: #0056b3; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input[type="file"], textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+    textarea { resize: vertical; min-height: 150px; }
+    .btn { display: inline-block; background-color: #0056b3; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+    .btn:hover { background-color: #004494; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload de Arquivos para Automação</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="cdr_file">Arquivo CorelDRAW (.cdr)</label>
+        <input type="file" id="cdr_file" name="cdr_file" accept=".cdr" required>
+      </div>
+      <div class="form-group">
+        <label for="product_list">Lista de Produtos</label>
+        <textarea id="product_list" name="product_list" placeholder="Cole a lista de produtos aqui, um por linha." required></textarea>
+      </div>
+      <button type="submit" class="btn">Enviar para Processamento</button>
+    </form>
+  </div>
+</body>
+</html>
